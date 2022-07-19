@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> [ 날짜 관련 유틸리티 ] </h2>
+	<ul>
+		<li>기본 포맷 <span th:text="${localDateTime}"></span></li>
+		<li>포맷 변경 <span th:text="${#temporals.format(localDateTime, 'yyyy년 MM월 dd일 HH:mm:ss')}"></span></li>
+	</ul>
+</body>
+</html>

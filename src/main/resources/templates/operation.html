@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> 연산 </h2>
+	<ul>
+		<li>산술연산
+			<ul>
+				<li>5 + 3 = <span th:text="5 + 3"></span></li>
+				<li>5 % 3 == 0 = <span th:text="5 % 3 == 0"></span></li>
+			</ul>
+		</li> 
+		<li>비교연산
+			<ul>
+			<!-- 
+				lt : <
+				le : <=
+				gt : >
+				ge : >=
+				eq : ==
+				ne : !=
+			 -->
+				<li>5 > 3 = <span th:text="5 > 3"></span></li>
+				<li>5 gt 3 = <span th:text="5 gt 3"></span></li>
+				<li>5 ge 6 = <span th:text="5 ge 6"></span></li>	
+			</ul>
+		</li>
+		<li>조건식
+			<ul>
+				<li>(10 % 2 == 0)? '짝수':'홀수' = 
+				<span th:text="(10 % 2 == 0)?'짝수':'홀수'"></span></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

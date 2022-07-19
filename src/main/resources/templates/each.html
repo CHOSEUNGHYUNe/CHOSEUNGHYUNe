@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3> [ 반복문 ] </h3>
+	<h4> 기본 반복문 </h4>
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+		</tr>
+		<tr th:each="member : ${members}">
+			<td th:text="${member.name}"></td>
+			<td th:text="${member.age}"></td>
+		</tr>
+	</table>
+	<table border="5">
+	<h4>상태값 추가 반복문</h4>
+		<tr>
+			<th>No.</th>
+			<th>이름</th>
+			<th>나이</th>
+			<th>상태</th>
+		</tr>
+		<tr th:each="member, memberStat : ${members}">
+			<td th:text="${memberStat.index}"></td>
+			<td th:text="${member.name}"></td>
+			<td th:text="${member.age}"></td>
+			<td>
+				size = <span th:text="${memberStat.size}"></span>
+				even = <span th:text="${memberStat.even}"></span>
+				odd = <span th:text="${memberStat.odd}"></span>
+				first = <span th:text="${memberStat.first}"></span>
+				last = <span th:text="${memberStat.last}"></span>
+				current = <span th:text="${memberStat.current}"></span>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

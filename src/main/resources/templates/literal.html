@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> 리터럴 </h2>
+	<ul> <!--작은 따옴표 안에 넣어야지 인식이 됨-->
+		<li>'Hello World' : <span th:text="'Hello World'"></span></li>
+		<li>'Hello' + ' World' : <span th:text="'Hello' + ' World'"></span></li>
+		<li>'Hello' + ' ${data}' : <span th:text="'Hello' + ${data}"></span></li>
+		<li> 리터럴 대체 |Hello ${data}| : <span th:text="|Hello ${data}|"></span></li>
+	</ul>
+</body>
+</html>

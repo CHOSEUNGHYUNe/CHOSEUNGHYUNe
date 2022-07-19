@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> [ 변수 표현식 ] </h2>
+	<ul>
+	Object
+		<li>${member1.name} : <span th:text="${member1.name}"></span></li>
+		<li>${member1['name']} : <span th:text="${member1['name']}"></span></li>
+		<li>${member1.getName()} : <span th:text="${member1.getName()}"></span></li>
+	List
+		<li>${members[0].name} : <span th:text="${members[0].name}"></span></li>
+		<li>${members[0]['name']} : <span th:text="${members[0]['name']}"></span></li>
+		<li>${members[0].getName()} : <span th:text="${members[0].getName()}"></span></li>
+	Map
+		<li>${memberMap['member2'].name} : <span th:text="${memberMap['member2'].name}"></span></li>
+		<li>${memberMap['member2']['name']} : <span th:text="${memberMap['member2']['name']}"></span></li>
+		<li>${memberMap['member2'].getName()} : <span th:text="${memberMap['member2'].getName()}"></span></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> [ URL 링크 ] </h2>
+	<ul>
+		<li><a th:href="@{/test}">기본 URL</a></li>
+		<li><a th:href="@{/test(param1=${data1}, param2=${data2})}">기본 URL</a></li>
+	</ul>
+</body>
+</html>
